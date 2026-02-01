@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Minimal researcher webpage with a margin-notes layout and clear section index."
+    />
+    <title>🚲 J. David Martinez</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="masthead">
+        <h1>David Martínez</h1>
+        <p class="title">
+          Predoctoral Research Fellow at Harvard Economics
+        </p>
+        <div class="link-row">
+          <!-- Replace assets/cv.pdf with your latest CV and keep the same filename. -->
+          <a href="assets/cv.pdf">CV</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <main id="main" class="content">
+        <section id="about" aria-labelledby="about-title">
+          <h2 id="about-title">About</h2>
+          <p>
+            Working towards a career in the intersections of economics, 
+            statistical decision theory and pattern recognition. I also very much enjoy on development economics and
+            political economy. 
+
+          </p>
+        </section>
+
+        <section id="working-papers" aria-labelledby="working-papers-title">
+          <h2 id="working-papers-title">Working Papers</h2>
+
+          <article class="paper">
+            <div class="paper-main">
+              <h3>
+                Coercive Capacity, Social Dissent, Repression or Redistribution? Evidence
+                from Authoritarian Mexico
+              </h3>
+              <div class="paper-links">
+                <a class="chip" href="assets/working_papers/0_militias_paper.pdf">Paper</a>
+              </div>
+              <p class="paper-authors">
+                Horacio Larreguy, David Martínez, Juan Felipe Riaño, Mariano
+                Sánchez-Talanquer
+              </p>
+              <p class="paper-meta">Working paper. This version: February 1, 2026.</p>
+              <p class="paper-summary">
+                We model how inherited coercive capacity shapes authoritarian responses to
+                rising dissent. We employ novel data on repression to show that Mexican municipalities with stronger militia
+                presence saw more repression and less land redistribution after mid-1960s social dissent
+                shocks.
+              </p>
+              <details class="paper-details">
+                <summary>Full abstract</summary>
+                <p>
+                  Why do authoritarian regimes exhibit subnational variation in their use
+                  of repression versus redistribution to manage local dissent? We develop
+                  a model in which an autocrat's localized response to dissent depends on
+                  incomplete information about the geography of people's discontent and
+                  the government's coercive capacity, a feature that authoritarian
+                  governments often inherit from the past. The model predicts that when
+                  dissent rises, rulers are more likely to rely on repression rather than
+                  redistribution in areas with strong inherited coercive capacity. We then
+                  test these predictions using novel data from twentieth-century Mexico
+                  under PRI rule. Our empirical strategy exploits a sharp increase in
+                  overall dissent in the mid-1960s and three sources of subnational
+                  variation: (1) a large-scale land reform that redistributed over half of
+                  all agricultural land between 1910 and 1992; (2) the localized presence
+                  of regime-aligned rural militias with revolutionary origins; and (3)
+                  newly digitized archival records documenting individual instances of
+                  repression over time. Difference-in-Differences and Instrumental
+                  Variable estimates indicate that after the sudden increase in dissent,
+                  municipalities with a stronger militia presence experienced more
+                  repression events and less land redistribution than areas with weaker or
+                  no militia presence. Our findings demonstrate how historical variation
+                  in inherited coercive capacity and informational frictions can shape the
+                  subnational logic of authoritarian control.
+                </p>
+              </details>
+            </div>
+          </article>
+        </section>
+
+        <section id="work-in-progress" aria-labelledby="work-in-progress-title">
+          <h2 id="work-in-progress-title">Work in Progress</h2>
+
+          <article class="paper">
+            <div class="paper-main">
+              <h3>The Effect of Russian Misinformation and Propaganda</h3>
+              <div class="paper-links">
+                <a class="chip" href="assets/work_in_progress/Baltics_project_preview.pdf">
+                  Beamer slides (preview)
+                </a>
+              </div>
+              <p class="paper-authors">Horacio Larreguy, David Martínez</p>
+              <p class="paper-meta">Work in progress.</p>
+              <p class="paper-summary">
+                We exploit events that generated quasi-experimental variation in trust toward COVID-19 mRNA vaccines during the early vaccination campaigns in the Baltic region. We show that demographic groups historically targeted by Russian state influence operations experienced disproportionately lower vaccination uptake following these events. Combining quantitative estimates with qualitative evidence, we link this differential response to the presence and activity of Russian state propaganda and influence efforts in Europe.
+              </p>
+              <p class="paper-meta">Full beamer available upon request.</p>
+            </div>
+          </article>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-title">
+          <h2 id="contact-title">Contact</h2>
+          <p>
+            Email: <a href="mailto:jmartinezhernandez@fas.harvard.edu">jmartinezhernandez@fas.harvard.edu</a>
+          </p>
+          <div class="contact-actions">
+            <button type="button" data-copy-email="jmartinezhernandez@fas.harvard.edu">
+              Copy email
+            </button>
+            <span id="copy-status" class="copy-status" aria-live="polite"></span>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <p>Built for GitHub Pages. Minimal, fast, and accessible.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <!--
+      Self-audit checklist:
+      - No horizontal scrolling at 320px. (confirmed)
+      - Work in Progress is the third visible section. (confirmed)
+      - Desktop shows 2 columns at >= 960px. (confirmed)
+      - Dark mode readable and not inverted incorrectly. (confirmed)
+    -->
+  </body>
+</html>
