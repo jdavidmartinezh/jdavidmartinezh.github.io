@@ -10,6 +10,8 @@
   --blue: #5dade2;
   --ocean: #1f618d;
   --deep: #154360;
+  --meta: #2a6a98;
+  --chip-border: #8ec4ea;
   --center-col: minmax(0, 65ch);
   --margin-col: minmax(200px, 240px);
   --gap: 40px;
@@ -34,6 +36,8 @@
     --blue: #5dade2;
     --ocean: #1f618d;
     --deep: #154360;
+    --meta: #2a6a98;
+    --chip-border: #8ec4ea;
   }
 }
 
@@ -60,7 +64,7 @@ body {
   margin: 0;
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   font-size: 19px;
-  line-height: 1.65;
+  line-height: 1.62;
   color: var(--fg);
   background: var(--bg);
   min-height: 100vh;
@@ -109,35 +113,25 @@ button:focus-visible {
 .masthead {
   grid-column: 2;
   max-width: 65ch;
-}
-
-.eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin: 0 0 var(--space-1);
-  color: var(--muted);
+  display: grid;
+  gap: var(--space-2);
 }
 
 h1 {
   font-size: clamp(2.35rem, 3.6vw, 3.2rem);
-  margin: 0 0 var(--space-1);
+  margin: 0;
   letter-spacing: -0.015em;
   font-weight: 700;
   color: var(--deep);
+  line-height: 1.08;
 }
 
 .title {
-  margin: 0 0 var(--space-1);
-  color: var(--muted);
+  margin: 0;
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--ocean);
-}
-
-.interests {
-  margin: 0 0 var(--space-2);
+  line-height: 1.35;
 }
 
 .link-row {
@@ -147,25 +141,19 @@ h1 {
   align-items: center;
   justify-content: flex-start;
   font-weight: 600;
+  margin: 0;
 }
 
 .link-row a {
   padding-bottom: 0.1rem;
 }
 
-.updated {
-  margin: var(--space-2) 0 0;
-  font-size: 1rem;
-  color: var(--muted);
-  font-variant-numeric: tabular-nums;
-}
-
 .layout {
   display: grid;
   grid-template-columns: var(--margin-col) var(--center-col) var(--margin-col);
   column-gap: var(--gap);
-  row-gap: var(--space-4);
-  padding: var(--space-3) var(--page-pad) var(--space-5);
+  row-gap: var(--space-3);
+  padding: var(--space-3) var(--page-pad) var(--space-4);
   align-items: start;
   max-width: calc(65ch + 560px);
   margin: 0 auto;
@@ -191,7 +179,7 @@ section + section::before {
   grid-column: 1;
   height: 1px;
   background: var(--rule);
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-1);
 }
 
 section > * {
@@ -199,24 +187,26 @@ section > * {
 }
 
 section h2 {
-  font-size: clamp(1.6rem, 2.2vw, 1.9rem);
-  margin: 0 0 var(--space-2);
-  position: relative;
-  padding-left: calc(var(--space-4) + var(--space-1));
+  font-size: clamp(1.75rem, 2.35vw, 2rem);
+  margin: 0 0 var(--space-1);
   letter-spacing: -0.01em;
   font-weight: 700;
   color: var(--ocean);
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  line-height: 1.15;
 }
 
 section h2::before {
   counter-increment: section;
   content: counter(section, decimal-leading-zero);
-  position: absolute;
-  left: 0;
-  top: 0.05rem;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   letter-spacing: 0.08em;
   color: var(--muted);
+  font-weight: 600;
+  min-width: 2ch;
+  opacity: 0.85;
 }
 
 .paper {
@@ -225,36 +215,42 @@ section h2::before {
   grid-template-columns: var(--center-col) var(--margin-col);
   column-gap: var(--gap);
   row-gap: var(--space-1);
-  padding: 0 0 var(--space-2);
+  padding: 0 0 var(--space-3);
 }
 
 .paper-main {
   grid-column: 1;
   border-top: 1px solid var(--rule);
-  padding-top: var(--space-1);
+  padding-top: 12px;
+  transition: border-color 160ms ease;
 }
 
 .paper h3 {
-  margin: 0 0 var(--space-1);
+  margin: 0 0 10px;
   font-size: 1.35rem;
   font-weight: 600;
   color: var(--ocean);
+  line-height: 1.28;
+  transition: color 160ms ease;
 }
 
 .paper-authors,
 .paper-meta {
   margin: 0;
-  color: var(--muted);
-  font-size: 1.1rem;
+  color: var(--meta);
+  font-size: 1rem;
+  line-height: 1.45;
 }
 
 .paper-summary {
-  margin: 0;
-  color: var(--fg);
+  margin: var(--space-1) 0 0;
+  color: var(--deep);
+  max-width: 60ch;
+  text-wrap: pretty;
 }
 
 .paper-details {
-  margin: 0;
+  margin: var(--space-1) 0 0;
 }
 
 .paper-details summary {
@@ -281,7 +277,9 @@ section h2::before {
 
 .paper-details p {
   margin: var(--space-1) 0 0;
-  color: var(--muted);
+  color: var(--meta);
+  max-width: 60ch;
+  text-wrap: pretty;
 }
 
 .paper-meta {
@@ -296,20 +294,37 @@ section h2::before {
   align-items: flex-start;
   justify-content: flex-start;
   align-self: start;
-  margin: 0 0 var(--space-1);
+  margin: 0 0 10px;
 }
 
 .chip {
   font-size: 0.95rem;
-  border: 1px solid var(--rule);
+  border: 1px solid var(--chip-border);
   border-radius: 999px;
   padding: 4px 10px;
-  color: var(--accent);
+  color: var(--ocean);
+  line-height: 1.2;
+  transition: border-color 140ms ease, color 140ms ease;
 }
 
 .chip:hover,
 .chip:focus-visible {
   border-color: var(--accent);
+  color: var(--deep);
+}
+
+.paper:hover .paper-main {
+  border-top-color: var(--accent);
+}
+
+.paper:hover h3 {
+  color: var(--deep);
+}
+
+#about p,
+#contact p {
+  max-width: 60ch;
+  text-wrap: pretty;
 }
 
 a[data-placeholder]::after {
@@ -381,11 +396,11 @@ button:hover {
   }
 
   section h2 {
-    padding-left: 0;
+    gap: var(--space-1);
   }
+
   section h2::before {
-    position: static;
-    margin-right: var(--space-1);
+    min-width: 2ch;
   }
 
   .paper {
