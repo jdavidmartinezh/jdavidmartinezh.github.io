@@ -392,9 +392,38 @@ button:hover {
 }
 
 .site-footer {
-  padding: var(--space-3) var(--page-pad) var(--space-5);
+  padding: var(--space-2) var(--page-pad) var(--space-4);
+  max-width: calc(65ch + 560px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: var(--margin-col) var(--center-col) var(--margin-col);
+  column-gap: var(--gap);
+}
+
+.poem-note {
+  grid-column: 2;
+  max-width: 65ch;
+  border-top: 1px solid var(--rule);
+  padding-top: 10px;
+}
+
+.poem-recommendation {
+  margin: 0;
   color: var(--muted);
-  font-size: 1.06rem;
+  font-size: 0.86rem;
+  letter-spacing: 0.02em;
+}
+
+.poem-quote {
+  margin: 6px 0 0;
+  color: var(--meta);
+}
+
+.poem-quote p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  font-style: italic;
 }
 
 @media (min-width: 960px) {
@@ -444,5 +473,13 @@ button:hover {
   .link-row {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .site-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .poem-note {
+    grid-column: 1;
   }
 }
