@@ -321,7 +321,12 @@ section h2::before {
   color: var(--deep);
 }
 
-#about p,
+#about p {
+  max-width: 60ch;
+  text-wrap: pretty;
+  font-size: 0.95em;
+}
+
 #contact p {
   max-width: 60ch;
   text-wrap: pretty;
