@@ -327,6 +327,21 @@ section h2::before {
   text-wrap: pretty;
 }
 
+#about .about-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(31, 97, 141, 0.45);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.12em;
+  transition: color 140ms ease, text-decoration-color 140ms ease;
+}
+
+#about .about-link:hover,
+#about .about-link:focus-visible {
+  color: var(--ocean);
+  text-decoration-color: var(--accent);
+}
+
 a[data-placeholder]::after {
   content: " (placeholder)";
   font-size: 0.75rem;
