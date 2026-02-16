@@ -400,18 +400,42 @@ button:hover {
   column-gap: var(--gap);
 }
 
-.poem-note {
+.notes-grid {
   grid-column: 2;
   max-width: 65ch;
   border-top: 1px solid var(--rule);
   padding-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 12px;
 }
 
-.poem-recommendation {
+.poem-note,
+.song-note {
+  margin: 0;
+}
+
+.poem-recommendation,
+.song-recommendation {
   margin: 0;
   color: var(--muted);
   font-size: 0.86rem;
   letter-spacing: 0.02em;
+}
+
+.recommendation-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(31, 97, 141, 0.45);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.12em;
+  transition: color 140ms ease, text-decoration-color 140ms ease;
+}
+
+.recommendation-link:hover,
+.recommendation-link:focus-visible {
+  color: var(--ocean);
+  text-decoration-color: var(--accent);
 }
 
 .poem-quote {
@@ -479,7 +503,10 @@ button:hover {
     grid-template-columns: 1fr;
   }
 
-  .poem-note {
+  .notes-grid {
     grid-column: 1;
+    max-width: none;
+    grid-template-columns: 1fr;
+    row-gap: 12px;
   }
 }
