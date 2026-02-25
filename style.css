@@ -393,11 +393,17 @@ button:hover {
 
 .site-footer {
   padding: var(--space-2) var(--page-pad) var(--space-4);
+  max-width: calc(65ch + 560px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: var(--margin-col) var(--center-col) var(--margin-col);
+  column-gap: var(--gap);
 }
 
 .notes-grid {
+  grid-column: 2;
   max-width: 65ch;
-  margin: 0 auto;
+  margin: 0;
   border-top: 1px solid var(--rule);
   padding-top: 10px;
   display: grid;
@@ -494,7 +500,12 @@ button:hover {
     align-items: flex-start;
   }
 
+  .site-footer {
+    grid-template-columns: 1fr;
+  }
+
   .notes-grid {
+    grid-column: 1;
     max-width: none;
     grid-template-columns: 1fr;
     row-gap: 12px;
