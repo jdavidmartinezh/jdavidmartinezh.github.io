@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="David Martinez, predoctoral research fellow at Harvard Economics. Working papers, work in progress, and contact."
+      content="J. David Martinez, predoctoral research fellow at Harvard Economics. Working papers, work in progress, and contact."
     />
-    <title>David Martínez</title>
+    <title>⛰️ J. David Martínez</title>
     <link rel="canonical" href="https://jdavidmartinezh.github.io/" />
     <meta name="theme-color" content="#e3dac9" />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://jdavidmartinezh.github.io/" />
-    <meta property="og:title" content="David Martínez" />
+    <meta property="og:title" content="J. David Martínez" />
     <meta
       property="og:description"
       content="Predoctoral Research Fellow at Harvard Economics. Working papers, work in progress, and contact."
@@ -21,11 +21,11 @@
     <meta property="og:image" content="https://jdavidmartinezh.github.io/assets/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="David Martinez academic profile" />
-    <meta property="og:site_name" content="David Martínez" />
+    <meta property="og:image:alt" content="J. David Martinez academic profile" />
+    <meta property="og:site_name" content="J. David Martínez" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="David Martínez" />
+    <meta name="twitter:title" content="J. David Martínez" />
     <meta
       name="twitter:description"
       content="Predoctoral Research Fellow at Harvard Economics. Working papers, work in progress, and contact."
@@ -39,15 +39,15 @@
 
     <header class="site-header">
       <div class="masthead">
-        <h1>David Martínez</h1>
+        <h1>J. David Martínez</h1>
         <p class="title">
           Predoctoral Research Fellow at Harvard Economics
         </p>
         <div class="link-row">
           <!-- Replace assets/cv.pdf with your latest CV and keep the same filename. -->
           <a href="assets/RESUME_JDMH_PERSONAL_WEBSITE.pdf">CV</a>
-          <a class="jump-link" href="#working-papers">Working Papers ↓</a>
           <a class="jump-link" href="#work-in-progress">Work in Progress ↓</a>
+          <a class="jump-link" href="#working-papers">Working Papers ↓</a>
         </div>
       </div>
     </header>
@@ -68,21 +68,87 @@
             meta-analysis of experimental data.
           </p>
           <p>
-            I graduated from ITAM in Mexico City with a B.S. in Economics and
-            an M.A. in Economic Theory. In both cases with core coursework from
-            the economics, computer science and math departments.
-          </p>
-          <p>
             Past experience includes serving as a Research Fellow at
             <a class="about-link" href="https://www.povertyactionlab.org/person/martinez-hernandez" target="_blank" rel="noopener noreferrer">J-PAL LAC</a>,
             Deputy Director for Strategy and Experimentation at
             <a class="about-link" href="https://www.banorte.com/wps/portal/gfb/Home/investor-relations/about-banorte/our-history/" target="_blank" rel="noopener noreferrer">Banorte Financial Group</a>,
             and Senior Consultant (statistics) for the
             <a class="about-link" href="https://en.wikipedia.org/wiki/Instituto_del_Fondo_Nacional_de_la_Vivienda_para_los_Trabajadores" target="_blank" rel="noopener noreferrer">Mexican Housing Ministry</a>.
-            I am also a proud former co-owner of
-            <a class="about-link" href="https://share.google/ht6BUjtyrjr7ytWe9" target="_blank" rel="noopener noreferrer">a small seafood restaurant near my college</a>.
           </p>
+          <details class="paper-details">
+            <summary>More about me</summary>
+            <p>
+              I graduated from ITAM in Mexico City with a B.S. in Economics and
+              an M.A. in Economic Theory. In both cases with core coursework from
+              the economics, computer science and math departments. I am also a
+              proud former co-owner of
+              <a class="about-link" href="https://share.google/ht6BUjtyrjr7ytWe9" target="_blank" rel="noopener noreferrer">a small seafood restaurant near my college</a>.
+            </p>
+          </details>
 
+        </section>
+        <section id="work-in-progress" aria-labelledby="work-in-progress-title">
+          <h2 id="work-in-progress-title">Work in Progress</h2>
+
+          <article class="paper">
+            <div class="paper-main">
+              <h3>Adaptive Mondrian Calibration for Efficient Individual Treatment Effect Prediction Sets</h3>
+              <p class="paper-authors">J. David Martínez</p>
+              <p class="paper-meta">Work in progress. April 3, 2026.</p>
+              <p class="paper-summary">
+                We extend Lei and Candès (2021)
+                <em>Conformal Inference of Counterfactuals and Individual Treatment Effects</em>
+                by proposing an Adaptive Mondrian Calibration (AMC) of the conformity scores to improve the efficiency of their algorithm. AMC introduces a partition that separates experimental units into groups minimizing the within heterogeneity of the conformity scores, then calibrates the conformity score locally.
+              </p>
+              <p class="paper-summary">
+                Numerical studies show that AMC yields shorter intervals and improved decision-making by reallocating conservativeness from easier to harder instances. Under mild extra assumptions over the admissible partition learners and sample splitting, it preserves marginal coverage guarantees. Under additional regularity conditions, we establish an oracle result that formalizes why this happens.
+              </p>
+              <figure class="paper-figure">
+                <img
+                  src="assets/work_in_progress/amc_exact_nested_ite.png"
+                  alt="Line chart comparing LC Benchmark, AMC learned, and AMC oracle across difficulty levels using mean deployed ITE interval length."
+                  loading="lazy"
+                />
+                <figcaption>
+                  Exact nested ITE construction under heteroskedastic correlated outcomes (d = 100).
+                </figcaption>
+              </figure>
+              <details class="paper-details">
+                <summary>Full abstract</summary>
+                <p>
+                  Lei and Candès (2021) propose an algorithm to quantify uncertainty for individual treatment effects (ITEs). Under random treatment assignment, their exact procedure achieves finite-sample marginal coverage without requiring accurate nuisance estimation of potential outcomes, including for units outside the experiment. The exact procedure may be conservative relative to equally performing methods without coverage guarantees. We propose Adaptive Mondrian Calibration (AMC) of conformity scores to improve the efficiency of this exact algorithm.
+                </p>
+                <p>
+                  AMC partitions experimental units into groups that reduce within-group heterogeneity in conformity scores, then calibrates locally. Under mild additional assumptions on admissible partition learners and sample splitting, the method preserves marginal coverage guarantees. Numerical studies suggest shorter intervals and improved decision-making by reallocating conservativeness from easier to harder instances.
+                </p>
+                <p>
+                  Under additional regularity conditions, we establish an oracle result formalizing a tradeoff: AMC improves efficiency when the partition learner approximates latent conformity-score heterogeneity well enough to offset sample loss from within-group calibration.
+                </p>
+              </details>
+              <p class="paper-meta">Draft available upon requests.</p>
+            </div>
+          </article>
+
+          <article class="paper">
+            <div class="paper-main">
+              <h3>The Effect of Russian Misinformation and Propaganda</h3>
+              <div class="paper-links">
+                <a class="chip" href="assets/work_in_progress/Baltics_project_preview.pdf">
+                  Beamer slides (preview)
+                </a>
+              </div>
+              <p class="paper-authors">
+                <a href="https://sites.google.com/site/hlarreguy/" target="_blank" rel="noopener noreferrer">
+                  Horacio Larreguy
+                </a>,
+                J. David Martínez
+              </p>
+              <p class="paper-summary">
+                We exploit events that generated quasi-experimental variation in trust toward COVID-19 mRNA vaccines during the early vaccination campaigns in the Baltic region. We show that demographic groups historically targeted by Russian state influence operations experienced disproportionately lower vaccination uptake following these events. Combining quantitative estimates with qualitative evidence, we link this differential response to the presence and activity of Russian state propaganda and influence efforts in Europe.
+              </p>
+              <p class="paper-meta">Full beamer available upon request.</p>
+            </div>
+          </article>
         </section>
 
         <section id="working-papers" aria-labelledby="working-papers-title">
@@ -101,7 +167,7 @@
                 <a href="https://sites.google.com/site/hlarreguy/" target="_blank" rel="noopener noreferrer">
                   Horacio Larreguy
                 </a>,
-                David Martínez,
+                J. David Martínez,
                 <a href="https://www.juanfeliperiano.com/" target="_blank" rel="noopener noreferrer">
                   Juan Felipe Riaño
                 </a>,
@@ -142,31 +208,6 @@
                   subnational logic of authoritarian control.
                 </p>
               </details>
-            </div>
-          </article>
-        </section>
-
-        <section id="work-in-progress" aria-labelledby="work-in-progress-title">
-          <h2 id="work-in-progress-title">Work in Progress</h2>
-
-          <article class="paper">
-            <div class="paper-main">
-              <h3>The Effect of Russian Misinformation and Propaganda</h3>
-              <div class="paper-links">
-                <a class="chip" href="assets/work_in_progress/Baltics_project_preview.pdf">
-                  Beamer slides (preview)
-                </a>
-              </div>
-              <p class="paper-authors">
-                <a href="https://sites.google.com/site/hlarreguy/" target="_blank" rel="noopener noreferrer">
-                  Horacio Larreguy
-                </a>,
-                David Martínez
-              </p>
-              <p class="paper-summary">
-                We exploit events that generated quasi-experimental variation in trust toward COVID-19 mRNA vaccines during the early vaccination campaigns in the Baltic region. We show that demographic groups historically targeted by Russian state influence operations experienced disproportionately lower vaccination uptake following these events. Combining quantitative estimates with qualitative evidence, we link this differential response to the presence and activity of Russian state propaganda and influence efforts in Europe.
-              </p>
-              <p class="paper-meta">Full beamer available upon request.</p>
             </div>
           </article>
         </section>

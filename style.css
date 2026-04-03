@@ -259,6 +259,26 @@ section h2::before {
   text-wrap: pretty;
 }
 
+.paper-figure {
+  margin: 10px 0 0;
+  max-width: 60ch;
+}
+
+.paper-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+}
+
+.paper-figure figcaption {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
 .paper-details {
   margin: var(--space-1) 0 0;
 }
