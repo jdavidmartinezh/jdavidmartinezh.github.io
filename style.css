@@ -460,6 +460,10 @@ button:hover {
   letter-spacing: 0.02em;
 }
 
+.poem-recommendation-extra {
+  margin-top: 10px;
+}
+
 .recommendation-link {
   color: inherit;
   text-decoration: underline;
