@@ -91,16 +91,16 @@
 
           <article class="paper">
             <div class="paper-main">
-              <h3>Adaptive Mondrian Calibration for Efficient Individual Treatment Effect Prediction Sets</h3>
+              <h3>Adaptive Calibration for Efficient Individual Treatment Effect Prediction Sets</h3>
               <p class="paper-authors">J. David Martínez Hernández</p>
               <p class="paper-meta">Work in progress. April 2026.</p>
               <p class="paper-summary">
                 I extend Lei and Candès (2021)
                 <em>Conformal Inference of Counterfactuals and Individual Treatment Effects</em>
-                by proposing an alternative calibration step of the conformity scores to improve the efficiency of their algorithm. The proposal separates experimental units into groups minimizing the within heterogeneity of the conformity scores and then calibrates the conformity score within each group.
+                by modifying the calibration step for conformity scores. The method groups experimental units with similar conformity-score behavior and calibrates within each group rather than globally.
               </p>
               <p class="paper-summary">
-                Numerical studies show that AMC yields shorter intervals and improved decision-making by reallocating conservativeness from easier to harder instances. Improving efficiency without losing finite sample guarantees on validity.
+                Numerical studies show that AMC produces shorter prediction intervals and improves treatment-assignment decisions by shifting conservativeness from easier to harder cases, while preserving finite-sample validity guarantees.
               </p>
               <figure class="paper-figure">
                 <img
@@ -109,18 +109,6 @@
                   loading="lazy"
                 />
               </figure>
-              <details class="paper-details">
-                <summary>Full abstract</summary>
-                <p>
-                  Lei and Candès (2021) propose an algorithm to quantify uncertainty for individual treatment effects (ITEs). Under random treatment assignment, their exact procedure achieves finite-sample marginal coverage without requiring accurate nuisance estimation of potential outcomes, including for units outside the experiment. The exact procedure may be conservative relative to equally performing methods without coverage guarantees. We propose Adaptive Mondrian Calibration (AMC) of conformity scores to improve the efficiency of this exact algorithm.
-                </p>
-                <p>
-                  AMC partitions experimental units into groups that reduce within-group heterogeneity in conformity scores, then calibrates locally. Under mild additional assumptions on admissible partition learners and sample splitting, the method preserves marginal coverage guarantees. Numerical studies suggest shorter intervals and improved decision-making by reallocating conservativeness from easier to harder instances.
-                </p>
-                <p>
-                  Under additional regularity conditions, we establish an oracle result formalizing a tradeoff: AMC improves efficiency when the partition learner approximates latent conformity-score heterogeneity well enough to offset sample loss from within-group calibration.
-                </p>
-              </details>
               <p class="paper-meta">Draft available upon requests.</p>
             </div>
           </article>
