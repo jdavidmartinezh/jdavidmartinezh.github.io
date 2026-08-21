@@ -158,6 +158,18 @@ h1 {
   color: var(--deep);
 }
 
+.jump-link-stacked {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.18;
+}
+
+.jump-link-note {
+  font-size: 0.72em;
+  font-weight: 600;
+}
+
 .layout {
   display: grid;
   grid-template-columns: var(--margin-col) var(--center-col) var(--margin-col);
