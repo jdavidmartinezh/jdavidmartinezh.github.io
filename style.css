@@ -264,6 +264,10 @@ section h2::before {
   max-width: 60ch;
 }
 
+.paper-showcase {
+  max-width: 74ch;
+}
+
 .paper-figure img {
   display: block;
   width: 100%;
