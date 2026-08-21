@@ -12,7 +12,7 @@
   --deep: #154360;
   --meta: #2a6a98;
   --chip-border: #8ec4ea;
-  --center-col: minmax(0, 65ch);
+  --center-col: minmax(0, 74ch);
   --margin-col: minmax(200px, 240px);
   --gap: 40px;
   --space-1: 8px;
@@ -63,7 +63,7 @@ html {
 body {
   margin: 0;
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.56;
   color: var(--fg);
   background: var(--bg);
@@ -103,7 +103,7 @@ button:focus-visible {
 
 .site-header {
   padding: var(--space-3) var(--page-pad) var(--space-2);
-  max-width: calc(65ch + 560px);
+  max-width: calc(74ch + 560px);
   margin: 0 auto;
   display: grid;
   grid-template-columns: var(--margin-col) var(--center-col) var(--margin-col);
@@ -112,15 +112,15 @@ button:focus-visible {
 
 .masthead {
   grid-column: 2;
-  max-width: 65ch;
+  max-width: 74ch;
   display: grid;
   gap: 12px;
 }
 
 h1 {
-  font-size: clamp(2.05rem, 3vw, 2.7rem);
+  font-size: 3rem;
   margin: 0;
-  letter-spacing: -0.015em;
+  letter-spacing: 0;
   font-weight: 700;
   color: var(--deep);
   line-height: 1.08;
@@ -128,7 +128,7 @@ h1 {
 
 .title {
   margin: 0;
-  font-size: 1.15rem;
+  font-size: 1.28rem;
   font-weight: 600;
   color: var(--ocean);
   line-height: 1.3;
@@ -165,7 +165,7 @@ h1 {
   row-gap: var(--space-3);
   padding: var(--space-2) var(--page-pad) var(--space-3);
   align-items: start;
-  max-width: calc(65ch + 560px);
+  max-width: calc(74ch + 560px);
   margin: 0 auto;
 }
 
@@ -197,9 +197,9 @@ section > * {
 }
 
 section h2 {
-  font-size: clamp(1.65rem, 2.2vw, 1.95rem);
+  font-size: 2.12rem;
   margin: 0 0 6px;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
   font-weight: 700;
   color: var(--ocean);
   display: flex;
@@ -211,7 +211,7 @@ section h2 {
 section h2::before {
   counter-increment: section;
   content: counter(section, decimal-leading-zero);
-  font-size: 0.9rem;
+  font-size: 1.06rem;
   letter-spacing: 0.08em;
   color: var(--muted);
   font-weight: 600;
@@ -237,7 +237,7 @@ section h2::before {
 
 .paper h3 {
   margin: 0 0 8px;
-  font-size: 1.34rem;
+  font-size: 1.48rem;
   font-weight: 600;
   color: var(--ocean);
   line-height: 1.28;
@@ -248,7 +248,7 @@ section h2::before {
 .paper-meta {
   margin: 0;
   color: var(--meta);
-  font-size: 1.06rem;
+  font-size: 1.13rem;
   line-height: 1.45;
 }
 
@@ -275,7 +275,7 @@ section h2::before {
 .paper-figure figcaption {
   margin: 6px 0 0;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 1.06rem;
   line-height: 1.4;
 }
 
@@ -328,7 +328,7 @@ section h2::before {
 }
 
 .chip {
-  font-size: 1rem;
+  font-size: 1.06rem;
   border: 1px solid var(--chip-border);
   border-radius: 999px;
   padding: 4px 10px;
@@ -354,7 +354,7 @@ section h2::before {
 #about p {
   max-width: 60ch;
   text-wrap: pretty;
-  font-size: 0.95em;
+  font-size: 1em;
 }
 
 #contact p {
@@ -406,14 +406,14 @@ button:hover {
 }
 
 .copy-status {
-  font-size: 1.06rem;
+  font-size: 1.13rem;
   color: var(--muted);
   min-height: 1.2rem;
 }
 
 .site-footer {
   padding: var(--space-2) var(--page-pad) var(--space-4);
-  max-width: calc(65ch + 560px);
+  max-width: calc(74ch + 560px);
   margin: 0 auto;
   display: grid;
   grid-template-columns: var(--margin-col) var(--center-col) var(--margin-col);
@@ -422,7 +422,7 @@ button:hover {
 
 .notes-grid {
   grid-column: 2;
-  max-width: 65ch;
+  max-width: 74ch;
   margin: 0;
   border-top: 1px solid var(--rule);
   padding-top: 10px;
@@ -440,7 +440,7 @@ button:hover {
 .song-recommendation {
   margin: 0;
   color: var(--muted);
-  font-size: 0.86rem;
+  font-size: 0.94rem;
   letter-spacing: 0.02em;
 }
 
@@ -466,7 +466,7 @@ button:hover {
 
 .poem-quote p {
   margin: 0;
-  font-size: 0.92rem;
+  font-size: 1rem;
   line-height: 1.45;
   font-style: italic;
 }
@@ -474,6 +474,17 @@ button:hover {
 @media (min-width: 960px) {
   :root {
     --page-pad: 40px;
+  }
+}
+
+
+@media (max-width: 520px) {
+  h1 {
+    font-size: 2.35rem;
+  }
+
+  section h2 {
+    font-size: 1.95rem;
   }
 }
 
