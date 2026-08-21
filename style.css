@@ -483,6 +483,10 @@ button:hover {
   font-style: italic;
 }
 
+.poem-quote p + p {
+  margin-top: 1em;
+}
+
 @media (min-width: 960px) {
   :root {
     --page-pad: 40px;
