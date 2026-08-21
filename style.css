@@ -124,6 +124,7 @@ h1 {
   font-weight: 700;
   color: var(--deep);
   line-height: 1.08;
+  text-wrap: balance;
 }
 
 .title {
@@ -221,6 +222,7 @@ section h2 {
   align-items: baseline;
   gap: var(--space-2);
   line-height: 1.15;
+  text-wrap: balance;
 }
 
 section h2::before {
@@ -256,6 +258,7 @@ section h2::before {
   font-weight: 600;
   color: var(--ocean);
   line-height: 1.28;
+  text-wrap: balance;
   transition: color 160ms ease;
 }
 
@@ -333,6 +336,7 @@ section h2::before {
 
 .paper-meta {
   font-variant-numeric: tabular-nums;
+  font-size: 1rem;
 }
 
 .paper-links {
