@@ -89,24 +89,27 @@
           <article class="paper">
             <div class="paper-main">
               <h3>Adaptive Prediction Intervals for Individual Treatment Effects</h3>
-              <p class="paper-authors">Jesús David Martínez Hernández</p>
+              <div class="paper-links">
+                <a class="chip" href="assets/writing_sample/adaptive_prediction_intervals_ite.pdf">Paper</a>
+              </div>
+              <p class="paper-authors">J. David Martínez Hernández</p>
               <p class="paper-meta">Working paper · November 2026</p>
               <p class="paper-summary">
-                I extend Lei and Candès (2021)
-                <em>Conformal Inference of Counterfactuals and Individual Treatment Effects</em>
-                by modifying the calibration step for conformity scores. The method (AMC) groups experimental units with similar conformity-score behavior and calibrates within each group rather than globally.
+                Conformal prediction uses held-out prediction errors to turn any model’s predictions into prediction intervals with finite-sample coverage guarantees under weak distributional assumptions. These guarantees make it attractive for constructing prediction sets for individual treatment effects (ITEs) without point identification. However, popular conformal procedures for ITEs apply the same margin of error to everyone, potentially producing intervals that are too narrow for individuals whose outcomes are hard to predict and unnecessarily wide for those whose outcomes are easier to predict.
               </p>
               <p class="paper-summary">
-                Numerical studies show that AMC produces shorter prediction intervals and improves treatment-assignment decisions by shifting conservativeness from easier to harder cases, while preserving finite-sample validity guarantees.
+                I propose an adaptive procedure that instead estimates separate margins for groups of individuals whose outcomes are similarly predictable. Grouping can reduce average interval width by lowering margins for more predictable outcomes, but finer groups leave fewer observations to estimate each margin. I therefore compare candidate groupings fixed before calibration and select the one with the smallest average interval width.
               </p>
-              <figure class="paper-figure">
+              <p class="paper-summary">
+                To account for a potential winner’s curse, I derive lower confidence bounds on group coverage that remain valid after selection. In simulations, reductions in average interval width range from a quarter to a third relative to without adaptive calibration. In three of four empirical applications, gains concentrate among individuals whose outcomes are easiest to predict.
+              </p>
+              <figure class="paper-figure paper-showcase">
                 <img
-                  src="assets/work_in_progress/amc_exact_nested_ite.png"
-                  alt="Line chart comparing LC Benchmark, AMC learned, and AMC oracle across difficulty levels using mean deployed ITE interval length."
+                  src="assets/writing_sample/adaptive_prediction_intervals_figure6.png"
+                  alt="Six-panel simulation figure comparing no grouping, learned groups, and the selected procedure across noise bins; selected intervals are narrower for easier cases while coverage remains near or above 95 percent."
                   loading="lazy"
                 />
               </figure>
-              <p class="paper-meta">Draft available upon request.</p>
             </div>
           </article>
 
